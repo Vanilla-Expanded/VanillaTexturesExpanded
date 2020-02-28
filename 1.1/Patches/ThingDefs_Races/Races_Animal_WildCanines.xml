@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+
+		<operations>
+
+					<!-- ============================ Tribal Headdress ========================== -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]</xpath>
+				<value>
+					<alternateGraphicChance>0.99</alternateGraphicChance>
+					<alternateGraphics>
+						  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath></li>
+						  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber2</texPath></li>
+						  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber3</texPath></li>
+						  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber4</texPath></li>
+					</alternateGraphics>
+				</value>
+			</li>
+
+		</operations>
+		
+	</Operation>
+</Patch>
