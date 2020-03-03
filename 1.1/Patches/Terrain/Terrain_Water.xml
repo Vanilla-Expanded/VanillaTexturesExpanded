@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+          <li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
+                    <value>
+						<waterDepthShader>Map/WaterDepth</waterDepthShader>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
+                    <value>
+						<takeSplashes>true</takeSplashes>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[defName="Marsh"]/edgeType</xpath>
+                    <value>
+						<edgeType>Water</edgeType>
+                    </value>
+                </li>
+            </operations>
+        </match>
+	</Operation>
+
+</Patch>
