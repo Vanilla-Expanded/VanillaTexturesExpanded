@@ -62,6 +62,7 @@
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/MainButtonDef[defName="World"]</xpath>
                     <value>
+						<minimized>True</minimized>
                         <iconPath>UI/Buttons/MainButtons/IconWorld</iconPath>
                     </value>
                 </li>
@@ -82,40 +83,6 @@
                     <value>
                         <iconPath>UI/Buttons/MainButtons/IconMenu</iconPath>
                     </value>
-                </li>
-
-                <!-- Un-minimise icons that were previously minimised -->
-                <li Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationTest">
-                            <xpath>/Defs/MainButtonDef[defName="History"]/minimized</xpath>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <xpath>/Defs/MainButtonDef[defName="History"]/minimized</xpath>
-                        </li>
-                    </operations>
-                </li>
-
-                <li Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationTest">
-                            <xpath>/Defs/MainButtonDef[defName="Factions"]/minimized</xpath>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <xpath>/Defs/MainButtonDef[defName="Factions"]/minimized</xpath>
-                        </li>
-                    </operations>
-                </li>
-
-                <li Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationTest">
-                            <xpath>/Defs/MainButtonDef[defName="Menu"]/minimized</xpath>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <xpath>/Defs/MainButtonDef[defName="Menu"]/minimized</xpath>
-                        </li>
-                    </operations>
                 </li>
 
             </operations>
