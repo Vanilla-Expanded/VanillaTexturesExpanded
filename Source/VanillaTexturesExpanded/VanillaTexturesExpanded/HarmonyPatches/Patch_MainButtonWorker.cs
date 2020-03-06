@@ -47,8 +47,8 @@ namespace VanillaTexturesExpanded
                 var noBlankTextInfo = AccessTools.Method(typeof(DoButton), nameof(NoBlankText));
                 var adjustedLogoPosInfo = AccessTools.Method(typeof(DoButton), nameof(AdjustedLogoPos));
 
-                bool textLeftMarginDone = false;
                 bool labelDone = false;
+                bool textLeftMarginDone = false;
                 bool vectorDone = false;
 
                 for (int i = 0; i < instructionList.Count; i++)
@@ -65,7 +65,8 @@ namespace VanillaTexturesExpanded
                         yield return instruction; // ""
                         yield return new CodeInstruction(OpCodes.Ldloc_S, textLocalIndex.Value); // label
                         yield return new CodeInstruction(OpCodes.Ldarg_0); // this
-                        instruction = new CodeInstruction(OpCodes.Call, noBlankTextInfo); // NoBlankText("", label, this)
+                        yield return new CodeInstruction(OpCodes.Ldarg_1); // rect
+                        instruction = new CodeInstruction(OpCodes.Call, noBlankTextInfo); // NoBlankText("", label, this, rect)
                         labelDone = true;
                     }
 
@@ -79,8 +80,9 @@ namespace VanillaTexturesExpanded
                         yield return instruction; // float textLeftMargin = flag ? 2f : -1f;
                         yield return new CodeInstruction(OpCodes.Ldloc_3); // textLeftMargin
                         yield return new CodeInstruction(OpCodes.Ldarg_0); // this
-                        yield return new CodeInstruction(OpCodes.Call, adjustedLeftMarginInfo); // AdjustedLeftMargin(textLeftMargin, this)
-                        instruction = instruction.Clone(); // textLeftMargin = AdjustedLeftMargin(textLeftMargin, this)
+                        yield return new CodeInstruction(OpCodes.Ldarg_1); // rect
+                        yield return new CodeInstruction(OpCodes.Call, adjustedLeftMarginInfo); // AdjustedLeftMargin(textLeftMargin, this, rect)
+                        instruction = instruction.Clone(); // textLeftMargin = AdjustedLeftMargin(textLeftMargin, this, rect)
                         textLeftMarginDone = true;
                     }
 
@@ -97,7 +99,7 @@ namespace VanillaTexturesExpanded
                         yield return new CodeInstruction(OpCodes.Ldloc_S, vectorLocalIndex.Value); // vector
                         yield return new CodeInstruction(OpCodes.Ldarg_1); // rect
                         yield return new CodeInstruction(OpCodes.Call, adjustedLogoPosInfo); // AdjustedLogoPos(this, vector, rect)
-                        instruction = instruction.Clone(); // vector = AdjustedLogoPos(vector, rect)
+                        instruction = instruction.Clone(); // vector = AdjustedLogoPos(this, vector, rect)
                         vectorDone = true;
                     }
 
@@ -105,31 +107,29 @@ namespace VanillaTexturesExpanded
                 }
             }
 
-            private static float AdjustedLeftMargin(float margin, MainButtonWorker instance)
+            private static float AdjustedLeftMargin(float margin, MainButtonWorker instance, Rect rect)
             {
                 // Modify rect if appropriate
-                if (instance.def.CanDrawIconAndLabel())
+                if (VanillaTexturesExpandedUtility.CanDrawIconAndLabel(rect.width, instance.def))
                 {
-                    const float MainButtonWorker_IconSize = 32; // Private const
-                    margin += MainButtonWorker_IconSize * 2;
+                    margin += VanillaTexturesExpandedUtility.CalculatedMainButtonIconMargin(rect.width) + VanillaTexturesExpandedUtility.MainButtonWorker_IconSize;
                 }
 
                 return margin;
             }
 
-            private static string NoBlankText(string blank, string label, MainButtonWorker instance)
+            private static string NoBlankText(string blank, string label, MainButtonWorker instance, Rect rect)
             {
                 // Unblank label if appropriate
-                return instance.def.CanDrawIconAndLabel() ? label : blank;
+                return VanillaTexturesExpandedUtility.CanDrawIconAndLabel(rect.width, instance.def) ? label : blank;
             }
 
             private static Vector2 AdjustedLogoPos(MainButtonWorker instance, Vector2 logoPos, Rect rect)
             {
                 // Move logo to the left if appropriate
-                if (instance.def.CanDrawIconAndLabel())
+                if (VanillaTexturesExpandedUtility.CanDrawIconAndLabel(rect.width, instance.def))
                 {
-                    const float MainButtonWorker_IconSize = 32; // Private const
-                    logoPos.x = rect.xMin + MainButtonWorker_IconSize;
+                    logoPos.x = rect.xMin + VanillaTexturesExpandedUtility.CalculatedMainButtonIconMargin(rect.width);
                 }
 
                 return logoPos;

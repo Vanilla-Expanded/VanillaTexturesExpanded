@@ -62,7 +62,6 @@
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/MainButtonDef[defName="World"]</xpath>
                     <value>
-						<minimized>True</minimized>
                         <iconPath>UI/Buttons/MainButtons/IconWorld</iconPath>
                     </value>
                 </li>
@@ -84,6 +83,16 @@
                         <iconPath>UI/Buttons/MainButtons/IconMenu</iconPath>
                     </value>
                 </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="History"]/minimized</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="Factions"]/minimized</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="Menu"]/minimized</xpath>
+                </li>
+
 
             </operations>
         </match>
