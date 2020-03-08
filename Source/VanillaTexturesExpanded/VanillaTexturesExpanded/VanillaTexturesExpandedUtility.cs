@@ -14,7 +14,8 @@ namespace VanillaTexturesExpanded
     public static class VanillaTexturesExpandedUtility
     {
 
-        public static bool CanDrawIconAndLabel(float rectWidth, MainButtonDef def) => !def.minimized && def.Icon != null && !def.label.NullOrEmpty() && (rectWidth / ReferenceWidth >= MinWidthFractionForIconAndLabel * Prefs.UIScale);
+        public static bool CanDrawIconAndLabel(float rectWidth, MainButtonDef def) => VanillaTexturesExpandedSettings.mainButtonMode == MainButtonRenderMode.IconsAndText &&
+            !def.minimized && def.Icon != null && !def.label.NullOrEmpty() && (rectWidth / ReferenceWidth >= MinWidthFractionForIconAndLabel * Prefs.UIScale);
 
         public static float CalculatedMainButtonIconMargin(float rectWidth) => MainButtonWorker_BaseIconMargin * (rectWidth / ReferenceWidth_IconMargin) / Prefs.UIScale;
 

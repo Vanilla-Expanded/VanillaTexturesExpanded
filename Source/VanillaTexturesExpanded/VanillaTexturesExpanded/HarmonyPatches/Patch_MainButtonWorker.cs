@@ -121,7 +121,10 @@ namespace VanillaTexturesExpanded
             private static string NoBlankText(string blank, string label, MainButtonWorker instance, Rect rect)
             {
                 // Unblank label if appropriate
-                return VanillaTexturesExpandedUtility.CanDrawIconAndLabel(rect.width, instance.def) ? label : blank;
+                if (VanillaTexturesExpandedSettings.mainButtonMode == MainButtonRenderMode.TextOnly || VanillaTexturesExpandedUtility.CanDrawIconAndLabel(rect.width, instance.def))
+                    return label;
+
+                return blank;
             }
 
             private static Vector2 AdjustedLogoPos(MainButtonWorker instance, Vector2 logoPos, Rect rect)
