@@ -9,20 +9,47 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
 			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]/alternateGraphicChance</xpath>
+					<match Class="PatchOperationReplace">
+					   <xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]/alternateGraphicChance</xpath>
+					   <value>
+							<alternateGraphicChance>0.99</alternateGraphicChance>
+					   </value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+					   <xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]</xpath>
+					   <value>
+							<alternateGraphicChance>0.99</alternateGraphicChance>
+					   </value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]/alternateGraphics</xpath>
+					<match Class="PatchOperationReplace">
+					   <xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]/alternateGraphics</xpath>
+					   <value>
+							<alternateGraphics></alternateGraphics>
+					   </value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+					   <xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]</xpath>
+					   <value>
+							<alternateGraphics></alternateGraphics>
+					   </value>
+					</nomatch>
+				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]</xpath>
+					<xpath>/Defs/PawnKindDef[defName="Wolf_Timber"]/alternateGraphics</xpath>
 					<value>
-						<alternateGraphicChance>0.99</alternateGraphicChance>
-						<alternateGraphics>
-							  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath></li>
-							  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber2</texPath></li>
-							  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber3</texPath></li>
-							  <li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber4</texPath></li>
-						</alternateGraphics>
+						<li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath></li>
+						<li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber2</texPath></li>
+						<li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber3</texPath></li>
+						<li><texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber4</texPath></li>
 					</value>
 				</li>
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>
