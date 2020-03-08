@@ -2,9 +2,16 @@
 <ModMetaData>
     <name>Vanilla Textures Expanded</name>
 	<packageId>VanillaExpanded.VTEXE</packageId>
-    <author>Oskar Potocki, Helixien, Chowder, Erin</author>
+    <author>Oskar Potocki, Helixien, Erin</author>
     <url></url>
-    <description>TBD</description>
+    <description>Vanilla Textures Expanded is a full-scale overhaul of vanilla (unmodded) RimWorld textures, with its main aim being not only to fix less aesthetically pleasing textures, but also to bring vanilla aesthetic in-line with that of Vanilla Expanded mod series.
+
+This texture pack includes over 450 textures remade in vector-based software (same method used for Vanilla Expanded mods), exported into 2x the size of vanilla textures. What used to be blurred before, now will be sharp and crisp, even if zoomed in fully using mods by the likes of Camera+.
+
+When redrawing vanilla textures, our main focus was on keeping them consistent with what players are used to - don’t expect any drastic design changes - we have only changed the look of things that were really bad or ambiguous.
+
+We plan to keep adding new textures in the future, so make sure to let us know what particular textures in vanilla game require changes!
+</description>
     <supportedVersions>
         <li>1.1</li>
 		<li>1.0</li>
