@@ -2,7 +2,7 @@
 <ModMetaData>
     <name>Vanilla Textures Expanded</name>
 	<packageId>VanillaExpanded.VTEXE</packageId>
-    <author>Oskar Potocki, Helixien, Erin</author>
+    <author>Oskar Potocki, Helixien, Erin, Luizi</author>
     <url></url>
     <description>Vanilla Textures Expanded is a full-scale overhaul of vanilla (unmodded) RimWorld textures, with its main aim being not only to fix less aesthetically pleasing textures, but also to bring vanilla aesthetic in-line with that of Vanilla Expanded mod series.
 
@@ -13,6 +13,7 @@ When redrawing vanilla textures, our main focus was on keeping them consistent w
 We plan to keep adding new textures in the future, so make sure to let us know what particular textures in vanilla game require changes!
 </description>
     <supportedVersions>
+        <li>1.2</li>
         <li>1.1</li>
 		<li>1.0</li>
     </supportedVersions>
