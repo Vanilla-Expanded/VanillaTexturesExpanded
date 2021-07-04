@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<!-- ============================ Alpaca ========================== -->
+        <mods>
+			<li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "Alpaca"]</xpath>
+					<value>
+						<alternateGraphicChance>0.66</alternateGraphicChance>
+						<alternateGraphics>
+							<li><color>(230,213,193)</color></li>
+							<li><color>(99,78,52)</color></li>
+						</alternateGraphics>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

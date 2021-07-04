@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<!-- ============================ Cougar ========================== -->
+        <mods>
+			<li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "Cougar"]</xpath>
+					<value>
+						<alternateGraphicChance>0.66</alternateGraphicChance>
+						<alternateGraphics>
+							<li><color>(209,185,171)</color></li>
+							<li><color>(92,62,45)</color></li>
+						</alternateGraphics>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
