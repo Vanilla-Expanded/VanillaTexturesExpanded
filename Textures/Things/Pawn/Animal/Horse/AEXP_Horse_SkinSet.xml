@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<SkinSet>
+  
+  <lifeStage>
+    <appliesToAll>true</appliesToAll>
+    <variants>
+      <skin>
+        <commonality>0.12</commonality>
+        <texName>Horse</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.25</commonality>
+        <texName>Horse1</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>Horse2</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>Horse3</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>Horse4</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.35</commonality>
+        <texName>Horse5</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.25</commonality>
+        <texName>Horse6</texName>
+      </skin>
+      
+    </variants>  
+  </lifeStage>
+  
+</SkinSet>
