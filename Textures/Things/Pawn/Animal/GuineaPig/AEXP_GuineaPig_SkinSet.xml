@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<SkinSet>
+  
+  <lifeStage>
+    <appliesToAll>true</appliesToAll>
+    <variants>
+      <skin>
+        <commonality>0</commonality>
+        <texName>GuineaPig</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>GuineaPig1</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>GuineaPig2</texName>
+      </skin>
+      
+      <skin>
+        <commonality>0.4</commonality>
+        <texName>GuineaPig3</texName>
+      </skin>
+      
+      
+    </variants>  
+  </lifeStage>
+  
+</SkinSet>

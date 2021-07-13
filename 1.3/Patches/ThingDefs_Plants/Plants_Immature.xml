@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Berry"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/BerryPlant_Immature</immatureGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Ambrosia"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/Ambrosia_Immature</immatureGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_TreeCocoa"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/TreeCocoa_Immature</immatureGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Plant_Corn"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/CornPlant_Immature</immatureGraphicPath>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Immature/RicePlant_Immature</immatureGraphicPath>
+					</value>
+				</li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
