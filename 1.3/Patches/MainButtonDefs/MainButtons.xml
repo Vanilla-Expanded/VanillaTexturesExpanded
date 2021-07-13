@@ -24,9 +24,9 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/MainButtonDef[defName="Restrict"]</xpath>
+                    <xpath>/Defs/MainButtonDef[defName="Schedule"]</xpath>
                     <value>
-                        <iconPath>UI/Buttons/MainButtons/IconRestrict</iconPath>
+                        <iconPath>UI/Buttons/MainButtons/IconSchedule</iconPath>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
