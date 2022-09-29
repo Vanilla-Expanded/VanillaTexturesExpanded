@@ -39,8 +39,8 @@ namespace VanillaTexturesExpanded
 
                     if (local.LocalType == typeof(string) && !textLocalIndex.HasValue)
                         textLocalIndex = local.LocalIndex;
-                    else if (local.LocalType == typeof(Vector2) && !vectorLocalIndex.HasValue)
-                        vectorLocalIndex = local.LocalIndex + 1; // Returns 4 without modifying for some reason (as of 1.1.2263)
+                    else if (local.LocalType == typeof(Vector2))
+                        vectorLocalIndex = local.LocalIndex; // Returns 4 without modifying for some reason (as of 1.1.2263)
                 }
 
                 var adjustedLeftMarginInfo = AccessTools.Method(typeof(DoButton), nameof(AdjustedLeftMargin));
@@ -70,8 +70,8 @@ namespace VanillaTexturesExpanded
                         labelDone = true;
                     }
 
-                    // Look for assignment to textLeftMargin local var (local index is 3 as of 1.1.2263)
-                    else if (!textLeftMarginDone && instruction.opcode == OpCodes.Stloc_3)
+                    // Look for assignment to textLeftMargin local var (local index is 3 as of 1.1.2263) (7 as of 1.3.3032) (3 as of 1.3.3050)
+                    else if (!textLeftMarginDone && labelDone && instruction.opcode == OpCodes.Stloc_3)
                     {
                         #if DEBUG
                             Log.Message("Patch_MainButtonWorker.DoButton match 2 of 3");

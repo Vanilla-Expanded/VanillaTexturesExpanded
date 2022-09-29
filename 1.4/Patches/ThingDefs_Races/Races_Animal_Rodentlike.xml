@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<!-- ============================ Rats and Chinchilla ========================== -->
+        <mods>
+			<li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "Rat"]</xpath>
+					<value>
+						<alternateGraphicChance>0.66</alternateGraphicChance>
+						<alternateGraphics>
+							<li><color>(184,176,169)</color></li>
+							<li><color>(59,53,49)</color></li>
+						</alternateGraphics>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "Chinchilla"]</xpath>
+					<value>
+						<alternateGraphicChance>0.66</alternateGraphicChance>
+						<alternateGraphics>
+							<li><color>(224,220,213)</color></li>
+							<li><color>(92,88,84)</color></li>
+						</alternateGraphics>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName = "Chinchilla"]/lifeStages//bodyGraphicData</xpath>
+					<value>
+						<shaderType>CutoutComplex</shaderType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

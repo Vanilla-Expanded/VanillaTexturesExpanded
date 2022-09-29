@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Core</li>
+        </mods>
+
+        <!-- ============================ Main Buttons Icons ========================== -->
+
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Architect"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconArchitect</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Work"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconWork</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Schedule"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconSchedule</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Research"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconResearch</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Assign"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconAssign</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Animals"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconAnimals</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Wildlife"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconWildlife</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="Quests"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconQuests</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/MainButtonDef[defName="World"]</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconWorld</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/MainButtonDef[defName="History"]/iconPath</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconHistory</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/MainButtonDef[defName="Factions"]/iconPath</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconFactions</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/MainButtonDef[defName="Menu"]/iconPath</xpath>
+                    <value>
+                        <iconPath>UI/Buttons/MainButtons/IconMenu</iconPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="History"]/minimized</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="Factions"]/minimized</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/MainButtonDef[defName="Menu"]/minimized</xpath>
+                </li>
+
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
