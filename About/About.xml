@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-
 	<name>Vanilla Textures Expanded</name>
 	<packageId>VanillaExpanded.VTEXE</packageId>
 	<author>Oskar Potocki, Helixien, Erin, Luizi, ISOREX, erdelf</author>
@@ -31,6 +30,6 @@ We plan to keep adding new textures in the future, so make sure to let us know w
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>brrainz.harmony</li>
 		<li>AIRetexture.Plants</li>
+		<li>OskarPotocki.VFE.Empire</li>
 	</loadAfter>
-
 </ModMetaData>
