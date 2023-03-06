@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>True</enabled>
+		<label>Enable Royalty shuttle retexture?</label>
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Factions Expanded - Empire</li>
+				</mods>
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<!-- ================================ Basic Shuttle ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/texPath</xpath>
+							<value>
+								<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/drawSize</xpath>
+							<value>
+								<drawSize>(7, 5)</drawSize>
+							</value>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/color</xpath>
+						</li>
+						<!-- ================================ Crahsed Shuttle ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="ShuttleCrashed"]/graphicData/texPath</xpath>
+							<value>
+								<texPath>Shuttle/ImperialShuttle/CrashedImperialShuttle</texPath>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName="ShuttleCrashed"]/graphicData</xpath>
+							<value>
+								<drawSize>(5, 3)</drawSize>
+							</value>
+						</li>
+						<!-- ================================ Skyfaller ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/texPath</xpath>
+							<value>
+								<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/drawSize</xpath>
+							<value>
+								<drawSize>(7,5)</drawSize>
+							</value>
+						</li>
+					</operations>
+				</nomatch>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
