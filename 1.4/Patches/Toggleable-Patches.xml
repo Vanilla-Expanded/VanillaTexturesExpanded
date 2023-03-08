@@ -4,7 +4,7 @@
 		<mods>
 			<li>Vanilla Expanded Framework</li>
 		</mods>
-		<match Class="PatchOperationSequence">
+		<match Class="VFECore.PatchOperationToggableSequence">
 			<enabled>True</enabled>
 			<label>Enable Royalty shuttle retexture?</label>
 			<operations>
