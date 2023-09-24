@@ -3,5 +3,7 @@
 		<li>/</li>
 		<li>1.4</li>
 		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.4/LoadFolders/VanillaExpandedFramework</li>
+		<li IfModNotActive="ReGrowth.BOTR.Core">1.4/LoadFolders/ReGrowthCore</li>
+		<li></li>
 	</v1.4>
 </loadFolders>
