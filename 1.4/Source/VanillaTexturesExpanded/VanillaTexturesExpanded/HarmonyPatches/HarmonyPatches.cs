@@ -19,9 +19,11 @@ namespace VanillaTexturesExpanded
 
         static HarmonyPatches()
         {
+            #if DEBUG
+                Harmony.DEBUG = true;
+            #endif
+
             VanillaTexturesExpanded.harmonyInstance.PatchAll();
-            var field = typeof(OverlayDrawer).GetField("NeedsPowerMat", BindingFlags.Static | BindingFlags.NonPublic);
-            field.SetValue(null, MaterialPool.MatFrom("UI/Overlays/NeedsPower", ShaderDatabase.MetaOverlay));
         }
 
     }
