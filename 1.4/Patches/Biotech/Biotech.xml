@@ -9,7 +9,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]</xpath>
 					<value>
-							<uiIconPath>Things/Building/Misc/IconWastepackAtomizer</uiIconPath>
+							<uiIconPath>Things/Building/Misc/WastepackAtomizerMenuIcon</uiIconPath>
 					</value>
 				</li>
 			</operations>

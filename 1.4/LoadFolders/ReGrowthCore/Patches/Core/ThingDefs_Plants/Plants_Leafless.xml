@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Core</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Core</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="SaguaroCactus"]/plant/leaflessGraphicPath</xpath>
 					<value>
@@ -68,8 +67,13 @@
 						<leaflessGraphicPath>Things/Plant/Leafless/TreeBirch_Leafless</leaflessGraphicPath>
 					</value>
 				</li>
-            </operations>
-        </match>
-    </Operation>
-
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+					<xpath>/Defs/ThingDef[defName="Plant_Ripthorn"]/plant/leaflessGraphicPath</xpath>
+					<value>
+						<leaflessGraphicPath>Things/Plant/Leafless/Ripthorn_Leafless</leaflessGraphicPath>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
 </Patch>
