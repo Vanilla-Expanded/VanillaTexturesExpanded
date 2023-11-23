@@ -2,7 +2,6 @@
 <ModMetaData>
 	<name>Vanilla Textures Expanded</name>
 	<author>Oskar Potocki, Helixien, Erin, Luizi, ISOREX, erdelf</author>
-	<packageId>VanillaExpanded.VTEXE</packageId>
 	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2016436324</url>
 	<supportedVersions>
 		<li>1.2</li>
@@ -17,6 +16,7 @@ When redrawing vanilla textures, our main focus was on keeping them consistent w
 
 We plan to keep adding new textures in the future, so make sure to let us know what particular textures in vanilla game require changes!
 	</description>
+	<packageId>VanillaExpanded.VTEXE</packageId>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -34,6 +34,7 @@ We plan to keep adding new textures in the future, so make sure to let us know w
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 		<li>OskarPotocki.VFE.Empire</li>
 		<li>AIRetexture.Plants</li>
+		<li>ReGrowth.BOTR.Core</li>
 		<li>Owlchemist.PerspectiveDoors</li>
 	</loadAfter>
 </ModMetaData>
