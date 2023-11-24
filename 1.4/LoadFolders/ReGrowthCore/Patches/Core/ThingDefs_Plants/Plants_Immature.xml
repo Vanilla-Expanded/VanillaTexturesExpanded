@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Core</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Core</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Plant_Berry"]/plant/immatureGraphicPath</xpath>
 					<value>
@@ -44,8 +43,7 @@
 						<immatureGraphicPath>Things/Plant/Leafless/Toxipotato_Immature</immatureGraphicPath>
 					</value>
 				</li>
-            </operations>
-        </match>
-    </Operation>
-
+			</operations>
+		</match>
+	</Operation>
 </Patch>
