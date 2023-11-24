@@ -38,6 +38,12 @@
 						<immatureGraphicPath>Things/Plant/Immature/RicePlant_Immature</immatureGraphicPath>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+					<xpath>/Defs/ThingDef[defName="Plant_Toxipotato"]/plant/immatureGraphicPath</xpath>
+					<value>
+						<immatureGraphicPath>Things/Plant/Leafless/Toxipotato_Immature</immatureGraphicPath>
+					</value>
+				</li>
             </operations>
         </match>
     </Operation>

@@ -68,6 +68,12 @@
 						<leaflessGraphicPath>Things/Plant/Leafless/TreeBirch_Leafless</leaflessGraphicPath>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+					<xpath>/Defs/ThingDef[defName="Plant_Ripthorn"]/plant/leaflessGraphicPath</xpath>
+					<value>
+						<leaflessGraphicPath>Things/Plant/Leafless/Ripthorn_Leafless</leaflessGraphicPath>
+					</value>
+				</li>
             </operations>
         </match>
     </Operation>
