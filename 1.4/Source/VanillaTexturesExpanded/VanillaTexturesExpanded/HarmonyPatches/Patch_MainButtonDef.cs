@@ -23,7 +23,7 @@ namespace VanillaTexturesExpanded
             public static void Postfix(ref Texture2D __result)
             {
                 // Don't return an icon if settings are configured that way
-                if (!VanillaTexturesExpandedSettings.MainButtonsHaveIcons)
+                if (!Core.settings.MainButtonsHaveIcons)
                     __result = null;
             }
 

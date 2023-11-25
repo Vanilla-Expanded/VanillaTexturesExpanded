@@ -6,52 +6,50 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using RimWorld;
-using HarmonyLib;
+using ModSettingsFramework;
 
 namespace VanillaTexturesExpanded
 {
-
-    public class VanillaTexturesExpandedSettings : ModSettings
+    public class VanillaTexturesExpandedSettings : PatchOperationWorker
     {
+        public MainButtonRenderMode mainButtonMode = MainButtonRenderMode.IconsAndText;
 
-        public static MainButtonRenderMode mainButtonMode = MainButtonRenderMode.IconsAndText;
+        public bool MainButtonsHaveIcons => mainButtonMode == MainButtonRenderMode.IconsAndText || mainButtonMode == MainButtonRenderMode.IconsThenText;
 
-        public static bool MainButtonsHaveIcons => mainButtonMode == MainButtonRenderMode.IconsAndText || mainButtonMode == MainButtonRenderMode.IconsThenText;
-
-        public void DoWindowContents(Rect wrect)
+        public override void CopyFrom(PatchOperationWorker savedWorker)
         {
-            var options = new Listing_Standard();
-            var defaultColor = GUI.color;
-            options.Begin(wrect);
+            var copy = savedWorker as VanillaTexturesExpandedSettings;
+            mainButtonMode = copy.mainButtonMode;
+        }
 
-            GUI.color = defaultColor;
-            Text.Font = GameFont.Small;
-            Text.Anchor = TextAnchor.UpperLeft;
-            options.Gap();
-
-            // Menu button render mode
-            options.Label("VanillaTexturesExpanded.MainButtonRenderMode".Translate());
+        public override void DoSettings(ModSettingsContainer container, Listing_Standard list)
+        {
+            var labelRect = list.Label("VanillaTexturesExpanded.MainButtonRenderMode".Translate());
+            scrollHeight += labelRect.height;
             var renderModeOpts = Enum.GetValues(typeof(MainButtonRenderMode)).Cast<MainButtonRenderMode>().ToList();
             for (int i = 0; i < renderModeOpts.Count; i++)
             {
                 var renderOpt = renderModeOpts[i];
-                if (options.RadioButton($"VanillaTexturesExpanded.MainButtonRenderMode_{renderOpt}".Translate(), mainButtonMode == renderOpt, 12))
+                var prevHeight = list.CurHeight;
+                if (list.RadioButton($"VanillaTexturesExpanded.MainButtonRenderMode_{renderOpt}".Translate(), 
+                    mainButtonMode == renderOpt, 12))
+                {
                     mainButtonMode = renderOpt;
+                }
+                var height = list.CurHeight - prevHeight;
+                scrollHeight += height;
             }
-
-            options.End();
-
-            VanillaTexturesExpanded.settings.Write();
-
         }
-
 
         public override void ExposeData()
         {
-            base.ExposeData();
             Scribe_Values.Look(ref mainButtonMode, "mainButtonMode", MainButtonRenderMode.IconsAndText);
         }
 
+        public override void Reset()
+        {
+            mainButtonMode = MainButtonRenderMode.IconsAndText;
+        }
     }
 
 }

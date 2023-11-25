@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="VanillaTexturesExpanded.VanillaTexturesExpandedSettings">
+		<id>VTE_General</id>
+		<order>0</order>
+		<category>VTE_General</category>
+		<showTooltipAsTinyText>false</showTooltipAsTinyText>
+	</Operation>
+	
+</Patch>
