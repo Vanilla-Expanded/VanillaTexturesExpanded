@@ -24,44 +24,39 @@
 					<operations>
 						<!-- ================================ Basic Shuttle ====================== -->
 						<li Class="PatchOperationReplace">
-							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/texPath</xpath>
+							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData</xpath>
 							<value>
-								<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+									<drawSize>(7, 5)</drawSize>
+									<shadowData>
+										<volume>(4.1, 1.0, 1.8)</volume>
+										<offset>(0, 0, -0.1)</offset>
+									</shadowData>
+								</graphicData>
 							</value>
-						</li>
-						<li Class="PatchOperationReplace">
-							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/drawSize</xpath>
-							<value>
-								<drawSize>(7, 5)</drawSize>
-							</value>
-						</li>
-						<li Class="PatchOperationRemove">
-							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData/color</xpath>
 						</li>
 						<!-- ================================ Crahsed Shuttle ====================== -->
 						<li Class="PatchOperationReplace">
-							<xpath>/Defs/ThingDef[defName="ShuttleCrashed"]/graphicData/texPath</xpath>
-							<value>
-								<texPath>Shuttle/ImperialShuttle/CrashedImperialShuttle</texPath>
-							</value>
-						</li>
-						<li Class="PatchOperationAdd">
 							<xpath>/Defs/ThingDef[defName="ShuttleCrashed"]/graphicData</xpath>
 							<value>
-								<drawSize>(5, 3)</drawSize>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/CrashedImperialShuttle</texPath>
+									<drawSize>(5, 3)</drawSize>
+								</graphicData>
 							</value>
 						</li>
 						<!-- ================================ Skyfaller ====================== -->
 						<li Class="PatchOperationReplace">
-							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/texPath</xpath>
+							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData</xpath>
 							<value>
-								<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
-							</value>
-						</li>
-						<li Class="PatchOperationReplace">
-							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData/drawSize</xpath>
-							<value>
-								<drawSize>(7,5)</drawSize>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+									<shaderType>CutoutFlying</shaderType>
+									<drawSize>(7,5)</drawSize>
+								</graphicData>
 							</value>
 						</li>
 					</operations>
