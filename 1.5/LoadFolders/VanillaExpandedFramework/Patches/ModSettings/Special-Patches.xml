@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ================ General Settings ================ -->
+	<Operation Class="VanillaTexturesExpanded.VanillaTexturesExpandedSettings">
+		<id>VTE_General</id>
+		<order>0</order>
+		<category>VTE_General</category>
+		<showTooltipAsTinyText>false</showTooltipAsTinyText>
+	</Operation>
+	<!-- ================ Shuttle Retexture ================ -->
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>True</defaultValue>
+		<label>Enable new shuttle textures</label>
+		<tooltip>Enable the new and vastly improved shuttle textures.</tooltip>
+		<id>VTE_ShuttleTextures</id>
+		<category>VTE_General</category>
+		<order>10</order>
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Factions Expanded - Empire</li>
+				</mods>
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<!-- ================================ Basic Shuttle ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="Shuttle"]/graphicData</xpath>
+							<value>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+									<drawSize>(7, 5)</drawSize>
+									<shadowData>
+										<volume>(4.1, 1.0, 1.8)</volume>
+										<offset>(0, 0, -0.1)</offset>
+									</shadowData>
+								</graphicData>
+							</value>
+						</li>
+						<!-- ================================ Crahsed Shuttle ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="ShuttleCrashed"]/graphicData</xpath>
+							<value>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/CrashedImperialShuttle</texPath>
+									<drawSize>(5, 3)</drawSize>
+								</graphicData>
+							</value>
+						</li>
+						<!-- ================================ Skyfaller ====================== -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[@Name="ShuttleSkyfallerBase"]/graphicData</xpath>
+							<value>
+								<graphicData>
+									<texPath>Shuttle/ImperialShuttle/ImperialShuttle</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+									<shaderType>CutoutFlying</shaderType>
+									<drawSize>(7,5)</drawSize>
+								</graphicData>
+							</value>
+						</li>
+					</operations>
+				</nomatch>
+			</li>
+		</operations>
+	</Operation>
+	<!-- ================ Steel Retexture ================ -->
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>False</defaultValue>
+		<label>Enable alternative steel textures</label>
+		<tooltip>Enable the alternative steel textures.</tooltip>
+		<id>VTE_SteelTextures</id>
+		<category>VTE_General</category>
+		<order>20</order>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Steel"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/Resource/ALT_Steel</texPath>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
