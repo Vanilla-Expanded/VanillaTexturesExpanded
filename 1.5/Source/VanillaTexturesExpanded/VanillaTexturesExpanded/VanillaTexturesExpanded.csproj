@@ -37,7 +37,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="0ModSettingsFramework">
-      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.4\Assemblies\0ModSettingsFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.5\Assemblies\0ModSettingsFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
