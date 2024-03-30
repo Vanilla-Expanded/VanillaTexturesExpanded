@@ -9,7 +9,6 @@
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
-		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.5/LoadFolders/VanillaExpandedFramework</li>
 		<li IfModActive="Owlchemist.PerspectiveDoors">1.5/LoadFolders/PerspectiveDoors</li>
 		<li IfModNotActive="ReGrowth.BOTR.Core">1.5/LoadFolders/ReGrowthCore</li>
 	</v1.5>
