@@ -81,4 +81,69 @@
 			</li>
 		</operations>
 	</Operation>
+	<Operation Class="ModSettingsFramework.PatchOperationModOption">
+		<defaultValue>True</defaultValue>
+		<label>Enable new meal textures</label>
+		<tooltip>Enable the new HD meal textures. Disable this if you have conflicts with other retextures or overhaul mods.</tooltip>
+		<id>VTE_MealTextures</id>
+		<category>VTE_General</category>
+		<order>25</order>
+		<operations>
+			<!-- ================================ Replacing Meal texture path due to game engine limitation ====================== -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealSurvivalPack"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/SurvivalPack</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealNutrientPaste"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/NutrientPaste</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealSimple"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/Simple</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealFine"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/Fine</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealFine_Veg"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/FineVeg</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealFine_Meat"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/FineMeat</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealLavish"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/Lavish</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealLavish_Veg"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/LavishVeg</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MealLavish_Meat"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Item/VTE_Meal/LavishMeat</texPath>
+				</value>
+			</li>
+		</operations>
+	</Operation>
 </Patch>
