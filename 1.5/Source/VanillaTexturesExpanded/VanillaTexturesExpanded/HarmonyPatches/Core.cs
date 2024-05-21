@@ -25,7 +25,6 @@ namespace VanillaTexturesExpanded
             settings = LoadedModManager.RunningMods.First(x =>
             x.assemblies?.loadedAssemblies?.Contains(typeof(Core).Assembly) ?? false)
                 .Patches.OfType<VanillaTexturesExpandedSettings>().First();
-
         }
     }
 }

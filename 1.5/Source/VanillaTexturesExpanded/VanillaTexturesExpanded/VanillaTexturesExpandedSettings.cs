@@ -7,6 +7,7 @@ using UnityEngine;
 using Verse;
 using RimWorld;
 using ModSettingsFramework;
+using System.Diagnostics;
 
 namespace VanillaTexturesExpanded
 {
