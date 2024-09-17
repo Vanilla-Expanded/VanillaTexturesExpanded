@@ -2,14 +2,14 @@
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Biotech</li>
+			<li>Ideology</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]</xpath>
+					<xpath>/Defs/ThingDef[defName="BiosculpterPod"]</xpath>
 					<value>
-						<uiIconPath>Things/Building/Misc/MenuIconWastepackAtomizer</uiIconPath>
+						<uiIconPath>Things/Building/Misc/BiosculpterPod/BiosculpterPodMenuIcon</uiIconPath>
 					</value>
 				</li>
 			</operations>
