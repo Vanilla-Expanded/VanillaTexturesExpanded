@@ -10,6 +10,7 @@
 					<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]</xpath>
 					<value>
 						<uiIconPath>Things/Building/Misc/MenuIconWastepackAtomizer</uiIconPath>
+						<uiIconScale>0.85</uiIconScale>
 					</value>
 				</li>
 			</operations>
