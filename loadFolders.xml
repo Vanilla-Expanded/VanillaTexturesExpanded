@@ -1,10 +1,5 @@
 <loadFolders>
-	<v1.4>
-		<li>/</li>
-		<li>1.4</li>
-		<li IfModActive="Owlchemist.PerspectiveDoors">1.4/LoadFolders/PerspectiveDoors</li>
-		<li IfModNotActive="ReGrowth.BOTR.Core">1.4/LoadFolders/ReGrowthCore</li>
-	</v1.4>
+	
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
@@ -17,4 +12,10 @@
 		<li IfModActive="Owlchemist.PerspectiveDoors">1.6/LoadFolders/PerspectiveDoors</li>
 		<li IfModNotActive="ReGrowth.BOTR.Core">1.6/LoadFolders/ReGrowthCore</li>
 	</v1.6>
+	<v1.7>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="Owlchemist.PerspectiveDoors">1.6/LoadFolders/PerspectiveDoors</li>
+		<li IfModNotActive="ReGrowth.BOTR.Core">1.6/LoadFolders/ReGrowthCore</li>
+	</v1.7>
 </loadFolders>
